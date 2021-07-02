@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container, Image, Wrapper, Text } from './styles';
 
-const ButtonIcon = () => {
+const ButtonIcon = ({ title , ...rest }) => {
   return (
-    <Wrapper>
+    <Wrapper {...rest}>
       <Container>
         <Image source={require('../../assets/discord.png')} />
       </Container>
-      <Text>Entrar com Discord</Text>
+      <Text>{title}</Text>
     </Wrapper>
   );
 }

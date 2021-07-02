@@ -1,7 +1,8 @@
 import styled from 'styled-components/native';
 import { theme } from '../../global/styles/theme';
-
-export const Wrapper = styled.TouchableOpacity`
+import { RectButton } from 'react-native-gesture-handler'
+ 
+export const Wrapper = styled(RectButton)`
   width: 100%;
   height: 56px;
   background-color: ${theme.colors.primary};
