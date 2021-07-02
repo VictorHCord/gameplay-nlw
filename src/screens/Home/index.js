@@ -1,14 +1,17 @@
 import React from 'react';
-import { Container, Header, Text } from './styles';
+import { Header } from './styles';
+import { View } from 'react-native';
 import Profile from '../../components/Profile';
+import ButtonAdd from '../../components/ButtonAdd';
 
 const Home = () => {
   return (
-    <Container>
+    <View>
       <Header>
-      <Profile />
+        <Profile />
+        <ButtonAdd />
       </Header>
-    </Container>
+    </View>
   )
 }
 
