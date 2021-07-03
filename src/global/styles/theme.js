@@ -12,6 +12,7 @@ export const theme = {
     secondary30: '#495BCC',
     
     heading: '#DDE3F0',
+    on: '#32BD50',
     line: '#991F36',
     discord: '#7289da',
     highlight: '#ABB1CC',

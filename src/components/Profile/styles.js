@@ -14,7 +14,7 @@ export const Greeting = styled.Text`
   font-family: ${theme.fonts.title500};
   font-size: 24px;
   color: ${theme.colors.heading};
-  margin-right: 6px;
+  margin-right: 5px;
 `;
 
 

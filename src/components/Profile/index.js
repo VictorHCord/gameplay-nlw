@@ -9,7 +9,7 @@ const Profile = () => {
       <Avatar urlImage={'https://github.com/VictorHCord.png'} />
       <View>
         <User>
-          <Greeting>Ola</Greeting>
+          <Greeting>Óla</Greeting>
           <UserName>Victor</UserName>
         </User>
         <Message>Hoje é dia de vitória</Message>
