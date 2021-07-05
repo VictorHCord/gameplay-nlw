@@ -11,31 +11,31 @@ export const Container = styled(LinearGradient)`
   margin-right: 8px;
 `;
 
-export const Content = styled.View`
+export const Content = styled(LinearGradient)`
   width: 100px;
   height: 116px;
-  opacity: ${props => props.isChecked ? 1 : 0.4};
-  background-color: ${theme.colors.secondary40};
+  opacity: ${props => props.isChecked ? 1 : 0.5};
   border-radius: 8px;
   align-items: center;
   justify-content: space-between;
-  padding: 7px 0;
+  padding: 20px 0;
 `;
 
 export const Checking = styled.View`
+    position: absolute;
+    top: 7px;
+    right: 7px;
     width: ${props => props.isChecked ? '10px' : '12px'};
     height: ${props => props.isChecked ? '10px' : '12px'};
     background-color: ${props => props.isChecked ? theme.colors.primary : theme.colors.secondary100};
     border-color: ${theme.colors.secondary50};
     border-width: 2px;
-    align-self: flex-end;
-    margin-right: 7px;
     border-radius: 3px;
 
 `;
 
 export const Title = styled.Text`
-  font-family: ${theme.fonts.title500};
+  font-family: ${theme.fonts.title700};
   color: ${theme.colors.heading};
   font-size: 15px;
 `;
