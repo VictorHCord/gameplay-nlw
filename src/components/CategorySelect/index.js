@@ -3,7 +3,7 @@ import { Container } from './styles';
 import { categories } from '../../utils/categories';
 import Category from '../Category';
 
-const CategorySelect = ({ categorySelect, setCategory }) => {
+const CategorySelect = ({ categorySelect, setCategory, hasCheckBox = false }) => {
   return (
     <Container
       horizontal
@@ -17,6 +17,7 @@ const CategorySelect = ({ categorySelect, setCategory }) => {
           Icon={category.icon}
           checked={category.id == categorySelect}
           onPress={() => setCategory(category.id)}
+          hasCheckBox={hasCheckBox}
         />
       ))
       }

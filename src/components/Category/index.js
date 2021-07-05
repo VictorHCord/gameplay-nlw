@@ -4,7 +4,7 @@ import { Container, Content, Title, Checking } from './styles';
 import { theme } from '../../global/styles/theme';
 
 
-const Category = ({ title, Icon, checked = false, hasCheckBox = true ,  ...rest }) => {
+const Category = ({ title, Icon, checked = false, hasCheckBox = false ,  ...rest }) => {
   const { secondary40 ,  secondary50, secondary70, secondary85 } = theme.colors;
   let isChecked = checked;
 

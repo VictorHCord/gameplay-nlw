@@ -3,7 +3,7 @@ import { Divider } from './styles';
 
 const ListDivider = () => {
   return (
-    <Divider />
+    <Divider style={{ marginVertical: 31 }} />
   );
 }
 

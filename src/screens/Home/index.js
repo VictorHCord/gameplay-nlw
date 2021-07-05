@@ -5,6 +5,7 @@ import Profile from '../../components/Profile';
 import ListHeader from '../../components/ListHeader';
 import Appointment from '../../components/Appointment';
 import ListDivider from '../../components/ListDivider';
+import Background from '../../components/Background';
 import { View, FlatList } from 'react-native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { Header, Content, Match } from './styles';
@@ -48,7 +49,7 @@ const Home = () => {
   ]
 
   return (
-    <View>
+    <Background>
       <Header statusbar={statusbar}>
         <Profile />
         <ButtonAdd />
@@ -73,7 +74,7 @@ const Home = () => {
           )}
         />
       </Content>
-    </View>
+    </Background>
   );
 }
 
