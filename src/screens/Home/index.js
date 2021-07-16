@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import ButtonAdd from '../../components/ButtonAdd';
 import CategorySelect from '../../components/CategorySelect';
 import Profile from '../../components/Profile';
@@ -6,17 +7,22 @@ import ListHeader from '../../components/ListHeader';
 import Appointment from '../../components/Appointment';
 import ListDivider from '../../components/ListDivider';
 import Background from '../../components/Background';
-import { View, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { Header, Content, Match } from './styles';
 
 const Home = () => {
   const statusbar = `${getStatusBarHeight() + 26}px`
   const [category, setCategory] = useState('');
+  const navigation = useNavigation();
 
   const handleCategoryselect = (categoryId) => {
     categoryId === category ? setCategory('') : setCategory(categoryId);
   };
+
+  const handleAppointmentDetails = () => {
+    navigation.navigate('AppointmentDetails', { action: true });
+  }
 
   const appointments = [
     {
@@ -70,7 +76,7 @@ const Home = () => {
           showsVerticalScrollIndicator={false}
           ItemSeparatorComponent={() => <ListDivider />}
           renderItem={({ item }) => (
-            <Appointment data={item} />
+            <Appointment data={item} onPress={handleAppointmentDetails} />
           )}
         />
       </Content>
