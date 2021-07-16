@@ -1,16 +1,16 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Container, Title } from './styles';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import { theme } from '../../global/styles/theme';
 import { Feather, Fontisto } from '@expo/vector-icons';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 const Header = ({ title, action }) => {
   const navigation = useNavigation();
   const { secondary100, secondary40, heading, primary } = theme.colors;
-  const statusbar = `${getStatusBarHeight()}px`
+  const statusbar = `${getBottomSpace()}px`
 
   const handleGoBack = () => {
     navigation.goBack();
